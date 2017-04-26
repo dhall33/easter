@@ -9,7 +9,7 @@ import java.io.*;
 
 public class easter implements Comparable<easter> {
     
-    private static int intcounter = 0;     
+    private static int intcounter = 0;     //default and starting values
     private char chrthingy = '#';
   
      public static void main(String [] strEgg) {        
@@ -18,7 +18,7 @@ public class easter implements Comparable<easter> {
           objEgg.print('%');    
       }
 
-    public easter() {        
+    public easter() {        //(beginning) getters and setters
           setSymbol('#');       
           intcounter++;    
      }
@@ -42,14 +42,14 @@ public class easter implements Comparable<easter> {
        
     public void print(char pchrthingy) {        
              setSymbol(pchrthingy);        
-              System.out.println(this);  
+              System.out.println(this);   //(end)
        }
  
     public String toString() {       
           String strEgg = "";     
             strEgg += "  __  \n";     
             strEgg += " /" + getSymbol() + getSymbol() + "\\ \n";   
-            strEgg += "/"  + getSymbol() + getSymbol() + getSymbol() + getSymbol() + "\\ \n";      
+            strEgg += "/"  + getSymbol() + getSymbol() + getSymbol() + getSymbol() + "\\ \n";     //format of the eggs 
             strEgg += "|"  + getSymbol() + getSymbol() + getSymbol() + getSymbol() + "|\n";
             strEgg += "\\____/\n";        
             return strEgg; 
