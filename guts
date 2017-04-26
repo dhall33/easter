@@ -1,0 +1,59 @@
+//Daniel Hall
+//ITSE
+// April 25 2017
+//Easter egg printer with customizable design
+
+
+import java.util.*; 
+import java.io.*;
+
+public class easter implements Comparable<easter> {
+    
+    private static int intcounter = 0;     
+    private char chrthingy = '#';
+  
+     public static void main(String [] strEgg) {        
+          easter objEgg = new easter();       
+          System.out.println(objEgg);        
+          objEgg.print('%');    
+      }
+
+    public easter() {        
+          setSymbol('#');       
+          intcounter++;    
+     }
+     
+    public easter(char pchroutput) {     
+          setSymbol(pchroutput); 
+          intcounter++;   
+      }
+
+    public char getSymbol() {         
+          return chrthingy; 
+      }
+
+    public void setSymbol(char pchrthingy) {     
+           chrthingy = pchrthingy;  
+       }
+       
+    public static int getNumberOfEggs() {    
+            return intcounter;    
+       }   
+       
+    public void print(char pchrthingy) {        
+             setSymbol(pchrthingy);        
+              System.out.println(this);  
+       }
+ 
+    public String toString() {       
+          String strEgg = "";     
+            strEgg += "  __  \n";     
+            strEgg += " /" + getSymbol() + getSymbol() + "\\ \n";   
+            strEgg += "/"  + getSymbol() + getSymbol() + getSymbol() + getSymbol() + "\\ \n";      
+            strEgg += "|"  + getSymbol() + getSymbol() + getSymbol() + getSymbol() + "|\n";
+            strEgg += "\\____/\n";        
+            return strEgg; 
+            
+            }
+            
+         }
